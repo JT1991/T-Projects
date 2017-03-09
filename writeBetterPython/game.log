@@ -1,0 +1,2 @@
+INFO:root:monster: (0, 2); door: (1, 2); player: (2, 0);
+INFO:root:monster: (2, 0); door: (1, 0); player: (1, 2);

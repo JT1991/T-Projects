@@ -1,0 +1,8 @@
+{% macro hide_email(user) %}
+{%- set handle, domain = user.email.split('@') -%}
+{%- set hidden = handle[0] + ("*" * handle[1:]|length) -%}
+{{ hidden + "@" + domain }}
+{%- endmacro %}
+
+##This hides an email ex:
+j*********@gmail.com instead of joshthorn91@gmail.com

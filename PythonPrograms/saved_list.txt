@@ -1,0 +1,6 @@
+soda 
+chips
+soda -2
+apples
+oranges
+milk
