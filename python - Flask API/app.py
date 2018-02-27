@@ -23,8 +23,8 @@ limiter.limit(config.DEFAULT_RATE, per_method=True,
 
 
 @app.route('/')
-def hellow_world():
-  return"Hello World"
+#def hellow_world():
+  #return"Hello World"
 
 @app.route('/api/v1/users/token', methods=["GET"])
 @auth.login_required

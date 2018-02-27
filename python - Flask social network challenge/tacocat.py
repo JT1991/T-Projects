@@ -9,7 +9,7 @@ import forms
 
 
 DEBUG = True
-PORT = 8000
+PORT = 8060
 HOST = '0.0.0.0'
 
 app = Flask(__name__)
