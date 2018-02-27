@@ -1,3 +1,9 @@
+var activeMedia;
+
+function MediaHandler(){
+  this.stream = undefined;
+}
+
 function Playlist() {
   this.songs = [];
   this.nowPlayingIndex = 0;
@@ -9,7 +15,9 @@ Playlist.prototype.add = function(song) {
 
 Playlist.prototype.play = function() {
   var currentSong = this.songs[this.nowPlayingIndex];
+  activeMedia = currentSong.url;
   currentSong.play()
+  return activeMedia
 };
 
 Playlist.prototype.stop = function(){
@@ -32,3 +40,14 @@ Playlist.prototype.renderInElement = function(list) {
     list.innerHTML += this.songs[i].toHTML();
   }
 };
+
+MediaHandler.prototype.play = function(activeMedia){
+	this.stream = new Audio(activeMedia);
+	this.stream.play();
+}
+
+MediaHandler.prototype.stop = function()
+{
+	this.stream.pause();
+	this.currentTIme = 0;
+}

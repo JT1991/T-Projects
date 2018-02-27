@@ -1,13 +1,5 @@
 var playlist = new Playlist();
-
-var HereComesTheSun = new Song("Here comes the sun", "The Beatles", "2:54");
-var WalkingOnSunshine = new Song("Walking on sunshine", "Katrina and the Waves", "3:43");
-var ShaunOfDead = new Movie("Shaun of the Dead", 2003, "2:13:00");
-
-
-playlist.add(HereComesTheSun);
-playlist.add(WalkingOnSunshine);
-playlist.add(ShaunOfDead);
+var stream = new MediaHandler();
 
 var playlistElement = document.getElementById("playlist");
 
@@ -16,6 +8,7 @@ playlist.renderInElement(playlistElement);
 var playButton = document.getElementById('play');
 playButton.onclick = function() {
   playlist.play();
+  stream.play(activeMedia);
   playlist.renderInElement(playlistElement);
 
 }
@@ -23,6 +16,8 @@ playButton.onclick = function() {
 var nextButton = document.getElementById('next');
 nextButton.onclick = function() {
   playlist.next();
+  stream.stop(activeMedia);
+  stream.play(activeMedia);
   playlist.renderInElement(playlistElement);
 
 }
@@ -30,7 +25,14 @@ nextButton.onclick = function() {
 var stopButton = document.getElementById('stop');
 stopButton.onclick = function() {
   playlist.stop();
+  stream.stop(activeMedia);
   playlist.renderInElement(playlistElement);
 
+}
+
+var uploadButton = document.getElementById('upload');
+uploadButton.onclick = function(){
+	
+	playlist.renderInElement(playlistElement);
 }
 

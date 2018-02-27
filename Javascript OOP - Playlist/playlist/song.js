@@ -1,5 +1,5 @@
-function Song(title, artist, duration) {
-  Media.call(this, title, duration);
+function Song(title, artist, duration, url) {
+  Media.call(this, title, duration, url);//file
   this.artist = artist;
 }
 

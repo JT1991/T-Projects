@@ -1,6 +1,7 @@
-function Media(title, duration) {
+function Media(title, duration, url) {//file
   this.title = title;
   this.duration = duration;
+  this.url = url;
   this.isPlaying = false;
 }
 

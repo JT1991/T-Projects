@@ -1,5 +1,5 @@
-function Movie(title, year, duration) {
-  Media.call(this, title, duration);
+function Movie(title, year, duration, url) {
+  Media.call(this, title, duration, url)
   this.year = year;
 }
 

@@ -15,9 +15,15 @@
         <button id="play">Play</button>
         <button id="next">Next</button>
         <button id="stop">Stop</button>
-
+		<button id="upload">Upload</button>
     </div>
 
+    <form action="index.html" method="post" enctype="multipart/form-data" target="upload_target" >
+        File: <input name="myfile" type="file" />
+              <input type="submit" name="submitBtn" value="Upload" />
+    </form>
+	
+	
     <script src="playlist.js"></script>
     <script src="media.js"></script>
     <script src="song.js"></script>
