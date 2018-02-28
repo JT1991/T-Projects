@@ -12,10 +12,10 @@ Song.prototype.toHTML = function() {
   }
   htmlString += '>';
   htmlString += this.title;
-  htmlString += ' - '
+  /*htmlString += ' - '
   htmlString += this.artist;
   htmlString += '<span class="duration">'
-  htmlString += this.duration;
+  htmlString += this.duration;*/
   htmlString += '</span></li>';
   return htmlString;
 };

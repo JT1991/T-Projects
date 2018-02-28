@@ -9,6 +9,7 @@
 
     <div>
         <h1>Treetunes</h1>
+		<input type="file" name="file" id="file">
 
         <ol id="playlist">
         </ol>
@@ -16,13 +17,11 @@
         <button id="next">Next</button>
         <button id="stop">Stop</button>
     </div>
-	
-	<form enctype="multipart/form-data" action="uploader.php" method="POST">
-	<input type="hidden" name="MAX_FILE_SIZE" value="50000000" />
-Choose a file to upload: <input name="uploadedfile" type="file" /><br />
-<input type="submit" value="Upload File" />
-</form>
 
+<form enctype="multipart/form-data" id="file-form" action="handler.php" method="POST">
+  <input type="file" id="file-select" name="uploadedfile" multiple/>
+  <button type="submit" id="upload-button">Upload</button>
+</form>
 
     <script src="playlist.js"></script>
     <script src="media.js"></script>
